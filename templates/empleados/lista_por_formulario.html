@@ -1,0 +1,14 @@
+<h1> estas en lista_por_formulario.html</h1>
+
+<form method='get'>{% csrf_token %}
+    <input type='text' id='kword' name='kword' placeholder='Ingrese el nombre aquí'>
+    <button type='submit'>Buscar</button>
+</form>
+
+<h3>Lista de resultados</h3>
+
+<ul>
+    {% for empleado in empleados%}
+        <li>{{empleado}} </li>
+    {%endfor%}
+</ul>
